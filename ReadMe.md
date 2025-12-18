@@ -6,10 +6,12 @@ A Node.js REST API built with Express and MongoDB, using Docker for local databa
 Node.js
 Express.js
 MongoDB
-
+Docker
 
 # Pull dependencies
-go to root folder and run "npm install"
+Go to root folder
+run "docker compose -f setup.yaml up -d"
+run "npm install"
 
 # Run application
 go to root folder and run "node index.js"

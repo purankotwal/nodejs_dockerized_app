@@ -1,7 +1,7 @@
 
 const MongoClient = require("mongodb").MongoClient;
 
-const MONGO_URL = "mongodb://admin:password@localhost:27012";
+const MONGO_URL = "mongodb://admin:password@localhost:27017";
 const client = new MongoClient(MONGO_URL);
 
 
