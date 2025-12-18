@@ -11,7 +11,10 @@ Docker
 # Pull dependencies
 Go to root folder
 
-run "docker compose -f setup.yaml up -d"
+<!-- run "docker compose -f setup.yaml up -d" -->
+<!-- run "docker build -t nodejs_dockerized_app:1.0 ." -->
+<!-- run "docker run -p 8082:8082 nodejs_dockerized_app:1.0" -->
+<!-- docker run -p 8082:8082 -e MONGO_DB_HOST=host.docker.internal nodejs_dockerized_app:1.0 -->
 
 run "npm install"
 

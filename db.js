@@ -1,14 +1,21 @@
 
 const MongoClient = require("mongodb").MongoClient;
 
-const MONGO_URL = "mongodb://admin:password@localhost:27017";
+// get username and password from environment variables
+const username = process.env.MONGO_DB_USERNAME;
+const password = process.env.MONGO_DB_PWD;
+const host = process.env.MONGO_DB_HOST;
+const port = process.env.MONGO_DB_PORT;
+const dbName = process.env.MONGO_DB_NAME;
+
+const MONGO_URL = `mongodb://${username}:${password}@${host}:${port}`;
 const client = new MongoClient(MONGO_URL);
 
 
 async function GetDB() {
     await client.connect(MONGO_URL);
     console.log('Connected successfully to server');
-    const db = client.db("employees");
+    const db = client.db(dbName);
     return db;
 }
 

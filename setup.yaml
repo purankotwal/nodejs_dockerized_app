@@ -1,4 +1,16 @@
 services:
+  app:
+    build: .
+    ports:
+      - "8085:8082"
+    environment:
+      MONGO_DB_HOST: mongo
+      MONGO_DB_PORT: 27017
+      MONGO_DB_USERNAME: admin
+      MONGO_DB_PWD: password
+      MONGO_DB_NAME: employees
+    depends_on:
+      - mongo
   mongo:
     image: mongo
     ports: 
