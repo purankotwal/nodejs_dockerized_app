@@ -10,11 +10,15 @@ Docker
 
 # Pull dependencies
 Go to root folder
+
 run "docker compose -f setup.yaml up -d"
+
 run "npm install"
 
 # Run application
-go to root folder and run "node index.js"
+go to root folder
+
+run "node index.js"
 
 
 # API Operations
